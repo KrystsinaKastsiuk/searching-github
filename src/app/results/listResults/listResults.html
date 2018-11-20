@@ -1,0 +1,10 @@
+<div id="listComments">
+  <div ng-click=getData.sentRequest()>It's an example only</div>
+  <table>
+    <tr ng-repeat="user in users">
+      <td><span>{{user.name}}</span></td>
+      <td><span>{{user.html_url}}</span></td>
+      <td><span>{{user.description}}</span></td>
+    </tr>
+  </table>
+</div>

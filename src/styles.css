@@ -1,0 +1,34 @@
+#listCommentsForms {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+#listCommentsForms form {
+	display: flex;
+  align-items: start;
+}
+
+#listCommentsForms #text {
+  min-width: 700px;
+}
+
+#listComments {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+#listComments ul {
+	padding: 0px;
+	list-style: none;
+}
+
+.done {
+	text-decoration: line-through;
+	color: #ccc;
+}
+
+.button {
+  min-width: 40px;
+  background-color: rgba(128, 128, 128, 0.141);
+  border-radius: 50px;
+}
