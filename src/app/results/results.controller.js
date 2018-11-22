@@ -9,18 +9,17 @@
   function showResults(dataService, $scope, transferData) {
     const ctrl = this;
 
-    //********** Возможно это пригодится ************/
-    // $scope.$on('eventName', function (event, args) {
-    //   console.log(args);
-    //   $scope.request = args;
-    // });
+    $scope.$on('changedInputValue', function () {
+      getResponse();
+    });
 
-    this.getResponse = function() {
-      ctrl.request = transferData.getRequest(); //значение передаётся, сервис работает
+    getResponse();
+
+    function getResponse() {
+      ctrl.request = transferData.getRequest();
 
       dataService.findData('users', ctrl.request).then( response => {
         $scope.users = response.items;
-        console.log('users', $scope.users)
         return $scope.users;  
       });
     };
