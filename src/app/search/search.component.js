@@ -6,6 +6,6 @@
     .component('searchPage', {
       templateUrl: 'src/app/search/search.html',
       controller: 'searchData',
-      controllerAs: 'getData'
+      controllerAs: 'ctrl'
     })
   })();

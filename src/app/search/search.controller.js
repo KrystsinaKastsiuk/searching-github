@@ -1,39 +1,25 @@
 (function(){
-	'use strict';
-	
-		class searchData {
-			constructor(constantAPI, dataService, $scope) {
-        dataService.getUsers('javascript').then( response => { 
-          $scope.users = response.items; 
-          return $scope.users; 
-        });
+  'use strict';
+  angular
+  .module('searchingGithub')
+  .controller('searchData', searchData);
 
-        dataService.getCode('something').then( response => { 
-          $scope.codes = response.items; 
-          return $scope.codes; 
-        });
+  searchData.$inject = ['$rootScope', '$scope', '$state', '$stateParams', 'dataService', 'transferData'];
 
-        dataService.getIssues('something').then( response => { 
-          $scope.issues = response.items; 
-          return $scope.issues; 
-        });
+  function searchData($rootScope, $scope, $state, $stateParams, dataService, transferData) {
+    const ctrl = this;
+    ctrl.request = $stateParams.request;
 
-        dataService.getRepositories('something').then( response => { 
-          $scope.repositories = response.items; 
-          return $scope.repositories; 
-        });
-
-      }
-
-      sentRequest(){
-        console.log('Request was returned');
-      }
-    }
-
-    searchData.$inject = ['constantAPI', 'dataService', '$scope'];
-
-    angular
-      .module('searchingGithub')
-      .controller('searchData', searchData);
+    //************* С помощью событий ***************/
+    // $rootScope.$broadcast('eventName',  ctrl.request);
     
-	})();
+
+    ctrl.showRequests = function() {
+      $state.go("search.results", {request: ctrl.request});
+
+      //************* С помощью сервиса ***************/
+      //******* значение с сервиса приходит праввильно ********/
+      transferData.setRequest(ctrl.request);
+    };
+  }
+})();

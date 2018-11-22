@@ -1,25 +1,26 @@
-#listCommentsForms {
+#searchingData {
   margin: 0 auto;
   max-width: 900px;
 }
 
-#listCommentsForms form {
+.form {
 	display: flex;
   align-items: start;
 }
 
-#listCommentsForms #text {
+.form input {
   min-width: 700px;
 }
 
-#listComments {
+.listData {
   margin: 0 auto;
   max-width: 900px;
 }
 
-#listComments ul {
-	padding: 0px;
-	list-style: none;
+.listData img {
+  margin-right: 40px;
+  width: 50px;
+  border-radius: 50%;
 }
 
 .done {

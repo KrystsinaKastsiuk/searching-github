@@ -3,10 +3,7 @@
   "version": "0.1.0",
   "description": "",
   "main": "src/app.module.js",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve"
-  },
+  "scripts": {},
   "author": "Krystsina Kastsiuk",
   "license": "MIT",
   "dependencies": {},

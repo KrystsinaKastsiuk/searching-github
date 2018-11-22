@@ -1,0 +1,13 @@
+<div>
+  <div class="listData">
+    <h1>Show data for neighbour controller:</h1>
+    <button ng-click="ctrl.getResponse()">Update for neighbour</button>
+    <table>
+      <tr ng-repeat="user in users">
+        <td><img src = "{{user.avatar_url}}"></td>
+        <td><span>{{user.login}}</span></td>
+        <td><span>{{user.repos_url}}</span></td>
+      </tr>
+    </table>
+  </div>
+</div>

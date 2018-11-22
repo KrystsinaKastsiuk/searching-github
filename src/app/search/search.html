@@ -1,12 +1,8 @@
-  <h1>The second flight before the project WKL-GLA</h1>
-  <form name="form">
-    <md-input-container class="md-input-has-placeholder">
-      <label>Query:</label>
-      <input id="text" name="user" ng-model="getData.request" placeholder="Type your request..." ng-minlength="2" required>
-      <div ng-messages="form.$error">
-        <div ng-message="required">You did not enter a field</div>
-        <div ng-message="minlength">Your field is too short</div>
-      </div>
-    </md-input-container>
-    <md-button class="md-raised md-primary" ng-click="getData.sentRequest()" ng-disabled="form.$invalid">Find</md-button>
-  </form>
+<h1>The second flight before the project WKL-GLA</h1>
+<form name="searchForm" class="form col-xs-12">
+  <fieldset>
+    <legend>Query:</legend>
+    <input name="request" ng-model="ctrl.request" placeholder="Type your request..." required>
+  </fieldset>
+  <button type="submit"ng-click="ctrl.showRequests()">Find</button>
+</form>
