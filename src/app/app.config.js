@@ -10,8 +10,8 @@
           template: '<search-page></search-page><ui-view></ui-view>'
         })
         .state('search.results', {
-          url: 'search',
-          template: '<search-results-page></search-results-page>'
+          url: 'search/{request}',
+          template: '<list-menu-items></list-menu-items><search-results-page></search-results-page>'
         })
         // .state('search.results.users', {
         //   url: '/{request}/users',

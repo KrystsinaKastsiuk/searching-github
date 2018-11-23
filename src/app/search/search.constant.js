@@ -4,7 +4,6 @@
   angular
     .module('searchingGithub')
     .constant('constantAPI', {
-      // getUrlAPI: 'https://api.github.com/search/',
       getUrlAPI: 'https://api.github.com/search',
 
       users: { path: 'users?q=', param: '+location:Russia'},

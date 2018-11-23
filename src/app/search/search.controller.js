@@ -12,9 +12,7 @@
 
       ctrl.showRequests = function() {
         $state.go("search.results", {request: ctrl.request});
-
         transferData.setRequest(ctrl.request);
-        $rootScope.$broadcast('changedInputValue',  ctrl.request);
       };
     }
 })();

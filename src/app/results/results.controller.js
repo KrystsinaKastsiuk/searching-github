@@ -9,18 +9,13 @@
   function showResults(dataService, $scope, transferData) {
     const ctrl = this;
 
-    $scope.$on('changedInputValue', function () {
-      getResponse();
-    });
+    init();
 
-    getResponse();
-
-    function getResponse() {
+    function init() {
       ctrl.request = transferData.getRequest();
-
       dataService.findData('users', ctrl.request).then( response => {
-        $scope.users = response.items;
-        return $scope.users;  
+        ctrl.users = response.items;
+        return ctrl.users;  
       });
     };
   }
