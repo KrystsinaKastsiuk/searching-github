@@ -3,14 +3,17 @@
   
   angular
     .module('searchingGithub', ['ui.router'])
-    .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+    .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
       $stateProvider
         .state('search', {
           url: '/',
           template: '<search-page></search-page><ui-view></ui-view>'
         })
         .state('search.results', {
-          url: 'search/{request}',
+          url: 'search',
+          params: {
+            request: null
+          },
           template: '<list-menu-items></list-menu-items><search-results-page></search-results-page>'
         })
         // .state('search.results.users', {
@@ -34,5 +37,6 @@
         //   template: '<p>Not Found</p>'
         // });
       $urlRouterProvider.otherwise("/");
+      $locationProvider.html5Mode(true);
     }]);
 })();
