@@ -1,0 +1,35 @@
+#searchingData {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.form {
+	display: flex;
+  align-items: start;
+}
+
+.form input {
+  min-width: 700px;
+}
+
+.listData {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.listData img {
+  margin-right: 40px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.done {
+	text-decoration: line-through;
+	color: #ccc;
+}
+
+.button {
+  min-width: 40px;
+  background-color: rgba(128, 128, 128, 0.141);
+  border-radius: 50px;
+}
