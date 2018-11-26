@@ -1,7 +1,6 @@
 (function() {
 	'use strict';
 
-	angular
-		.module('searchingGithub', ['ui.router', 'ngMaterial', 'ngMessages']);
+	angular.module('gitHubSearch', ['ui.router', 'ngMaterial', 'ngMessages']);
 
 })();

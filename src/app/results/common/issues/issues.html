@@ -1,0 +1,10 @@
+﻿<div class="issues">
+  <ul ng-repeat="issue in issueCtrl.issues">
+    <li>
+      <span>{{issue.user.login}}</span>
+      <span>, current status: {{issue.state}}</span>
+      <span> and short description: {{issue.title}}</span>
+    </li>
+  </ul>
+  <ui-view></ui-view>
+</div>

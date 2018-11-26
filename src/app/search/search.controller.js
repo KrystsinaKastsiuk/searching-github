@@ -1,18 +1,17 @@
 (function(){
   'use strict';
   angular
-    .module('searchingGithub')
-    .controller('searchData', searchData);
+    .module('gitHubSearch')
+    .controller('SearchData', SearchData);
 
-    searchData.$inject = ['$rootScope', '$scope', '$state', '$stateParams', 'transferData'];
+    SearchData.$inject = ['$rootScope', '$scope', '$state', '$stateParams'];
 
-    function searchData($rootScope, $scope, $state, $stateParams, transferData) {
-      const ctrl = this;
-      ctrl.request = $stateParams.request;
+    function SearchData($rootScope, $scope, $state, $stateParams) {
+      const searchCtrl = this;
+      searchCtrl.request = $stateParams.request;
 
-      ctrl.showRequests = function() {
-        $state.go("search.results", {request: ctrl.request});
-        transferData.setRequest(ctrl.request);
+      searchCtrl.sendRequests = function() {
+        $state.go("search.results", {request: searchCtrl.request});
       };
     }
 })();

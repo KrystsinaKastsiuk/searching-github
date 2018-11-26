@@ -2,18 +2,21 @@
   'use strict';
   
   angular
-    .module('searchingGithub')
-    .factory('dataService', ['$http', 'constantAPI', function($http, constantAPI) {
-      let service = {};
+    .module('gitHubSearch')
+    .factory('dataService', dataService);
+    
+    dataService.$inject = ['$http', 'API'];
+
+    function dataService($http, API) {
+      const service = {};
 
       service.findData = (value, request) => {
-        // console.log("url", constantAPI.getUrlAPI + '/' + constantAPI[value].path + request + constantAPI[value].param);
         return $http({
           method:'GET', 
-          url: constantAPI.getUrlAPI + '/' + constantAPI[value].path + request + constantAPI[value].param
+          url: API.url + '/' + API[value].path + request + API[value].param
         }).then((response) => response.data, (response) => response.status);
       };
 
       return service;
-    }])
+    }
   })();

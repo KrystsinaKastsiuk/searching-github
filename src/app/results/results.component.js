@@ -2,10 +2,10 @@
   'use strict';
   
   angular
-    .module('searchingGithub')
-    .component('searchResultsPage', {
+    .module('gitHubSearch')
+    .component('resultsPage', {
       templateUrl: 'src/app/results/results.html',
-      controller: 'showResults',
-      controllerAs: 'ctrl'
+      controller: 'ShowResults',
+      controllerAs: 'resultsCtrl'
     })
   })();

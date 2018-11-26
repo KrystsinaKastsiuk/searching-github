@@ -2,10 +2,10 @@
   'use strict';
   
   angular
-    .module('searchingGithub')
-    .component('listMenuItems', {  
-      templateUrl: 'src/app/results/menu/menu.html',
-      controller: 'defineMenuItem',
-      controllerAs: 'ctrl'
+    .module('gitHubSearch')
+    .component('menu', {  
+      templateUrl: 'src/app/menu/menu.html',
+      controller: 'ShowResults',
+      controllerAs: 'resultsCtrl'
     })
   })();
