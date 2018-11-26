@@ -1,0 +1,9 @@
+﻿<div class="repositories">
+  <ul ng-repeat="repository in repoCtrl.repositories">
+    <li>
+      <span style="color:aquamarine;">Login: {{repository.owner.login}},</span>
+      <a href="{{repository.git_url}}">{{repository.git_url}}</a>
+    </li>
+  </ul>
+  <ui-view></ui-view>
+</div>

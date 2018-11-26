@@ -1,0 +1,18 @@
+﻿<md-menu>
+  <div class="md-list-item-text">
+    <md-button ng-click="resultsCtrl.clickUsersItem()">users</md-button>
+    <span ng-model='resultsCtrl.request'>{{resultsCtrl.usersTotal}}</span>
+  </div>
+  <div class="md-list-item-text">
+    <span ng-click="resultsCtrl.clickRepositoriesItem()">repositories</span>
+    <span ng-model='resultsCtrl.request'>{{resultsCtrl.repositoriesTotal}}</span>
+  </div>
+  <div class="md-list-item-text">
+    <span ng-click="resultsCtrl.clickIssuesItem()">issues</span>
+    <span ng-model='resultsCtrl.request'>{{resultsCtrl.issuesTotal}}</span>
+  </div>
+  <div class="md-list-item-text">
+    <span ng-click="resultsCtrl.clickCodesItem()">codes</span>
+    <span ng-model='resultsCtrl.request'>{{resultsCtrl.codesTotal}}</span>
+  </div>
+</md-menu>

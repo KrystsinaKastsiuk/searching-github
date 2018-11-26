@@ -1,0 +1,8 @@
+
+<div class="layout-column result-section">
+  <ul ng-repeat="item in resultsCtrl.itemsData" class="flex-30 list-group">
+    <li class="layout-row"><img ng-src="{{item.avatar_url}}"></li>
+    <li class="layout-row"><span>{{item.login}}</span></li>
+    <li class="layout-row"><span>{{item.repos_url}}</span></li>
+  </ul>
+</div>
