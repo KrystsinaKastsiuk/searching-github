@@ -1,12 +1,17 @@
 var gulp = require('gulp'),
-    connect = require('gulp-connect');
+    connect = require('gulp-connect'),
+    webserver = require('gulp-webserver');
  
 gulp.task('webserver', function() {
-  connect.server({
-    livereload: true,
-    port: 8000,
-    host: '0.0.0.0'
-  });
+  gulp.src('src')
+    .pipe(webserver({
+      livereload: true,
+      directoryListing: {
+        enable: true,
+        path: 'src/index.html'
+      },
+      open: true
+    }));
 });
 
 gulp.task('html', function () {

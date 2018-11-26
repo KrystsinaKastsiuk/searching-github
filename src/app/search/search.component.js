@@ -4,7 +4,7 @@
   angular
     .module('gitHubSearch')
     .component('searchPage', {
-      templateUrl: 'src/app/search/search.html',
+      templateUrl: 'app/search/search.html',
       controller: 'SearchData',
       controllerAs: 'searchCtrl'
     })
