@@ -1,7 +1,8 @@
 
   <h1><a href="/">The second flight before the project WKL-GLA</a></h1>
   <form name="searchForm">
-    <!-- <label>Query:</label> -->
-    <input name="request" ng-model="searchCtrl.request" placeholder="Type your request..." required>
-    <md-button class="md-raised md-primary md-button md-ink-ripple" type="submit" ng-click="searchCtrl.sendRequests()">Find</md-button>
+    <md-input-container>  
+      <input name="request" ng-model="searchCtrl.request" placeholder="Type your request..." required>
+      <md-button class="md-raised md-primary md-button md-ink-ripple" type="submit" ng-click="searchCtrl.sendRequests()">Find</md-button>
+    </md-input-container>
   </form>

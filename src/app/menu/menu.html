@@ -1,18 +1,18 @@
-﻿<md-menu>
-  <div class="md-list-item-text">
-    <md-button ng-click="resultsCtrl.clickUsersItem()">users</md-button>
-    <span ng-model='resultsCtrl.request'>{{resultsCtrl.usersTotal}}</span>
-  </div>
-  <div class="md-list-item-text">
-    <span ng-click="resultsCtrl.clickRepositoriesItem()">repositories</span>
-    <span ng-model='resultsCtrl.request'>{{resultsCtrl.repositoriesTotal}}</span>
-  </div>
-  <div class="md-list-item-text">
-    <span ng-click="resultsCtrl.clickIssuesItem()">issues</span>
-    <span ng-model='resultsCtrl.request'>{{resultsCtrl.issuesTotal}}</span>
-  </div>
-  <div class="md-list-item-text">
-    <span ng-click="resultsCtrl.clickCodesItem()">codes</span>
-    <span ng-model='resultsCtrl.request'>{{resultsCtrl.codesTotal}}</span>
-  </div>
-</md-menu>
+﻿<div class="list-group">
+  <a ng-click="resultsCtrl.clickUsersItem()" class="list-group-item">
+    <span class="item">Users</span>
+    <span ng-model='resultsCtrl.request' class="badge">{{resultsCtrl.usersTotal}}</span>
+  </a>
+  <a ng-click="resultsCtrl.clickRepositoriesItem()" class="list-group-item">
+    <span>Repositories</span>
+    <span ng-model='resultsCtrl.request' class="badge">{{resultsCtrl.repositoriesTotal}}</span>
+  </a>
+  <a ng-click="resultsCtrl.clickIssuesItem()" class="list-group-item">
+    <span>Issues</span>
+    <span ng-model='resultsCtrl.request' class="badge">{{resultsCtrl.issuesTotal}}</span>
+  </a>
+  <a ng-click="resultsCtrl.clickCodesItem()" class="list-group-item">
+    <span>Codes</span>
+    <span ng-model='resultsCtrl.request' class="badge">{{resultsCtrl.codesTotal}}</span>
+  </a>
+</div>

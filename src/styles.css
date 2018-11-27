@@ -1,3 +1,10 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+}
+
 #searchingData {
   margin: 0 auto;
   max-width: 900px;
@@ -16,18 +23,12 @@ form input {
   min-width: 700px;
 }
 
+
 .listData {
   margin: 0 auto;
   max-width: 900px;
   margin-right: 0px;
   margin-top: 20px;
-}
-
-.layout-row img {
-  margin-right: 40px;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
 }
 
 .done {
@@ -47,4 +48,111 @@ form input {
 
 li {
   list-style-type: none;
+}
+
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  width: 200px;
+}
+
+.list-group-item-user p {
+  margin: 0;
+}
+
+.list-group-item  .item {
+  width: 50px;
+} 
+
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+  z-index: 2;
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #337ab7;
+}
+
+.list-group-item:first-child {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.list-group-item > .badge {
+  float: right;
+}
+
+.badge {
+  display: inline-block;
+  padding: 7px 12px;    
+  margin: -4px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color:#19accc;
+  border-radius: 15px;
+}
+
+md-input-container {
+  display: inline-block;
+  position: relative;
+  padding: 2px;
+  margin: 18px 0;
+  vertical-align: middle;
+}
+
+md-input-container input {
+  padding: 2px 2px 1px;
+  border-width: 0 0 1px;
+  line-height: 26px;
+  height: 30px;
+  border-radius: 0;
+}
+.list {
+  width: 500px;
+}
+
+.list-result {
+  list-style: none;
+}
+
+.list-result img {
+  margin-right: 40px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.list-result li {
+  background-color:#e0ffbe80;
+  clear: both;
+  height: 50px;
+  width: 100%;
+}
+
+.list-group-item-user {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  border: 1px solid #ddd;
+}
+
+.list-group-item-user em {
+  font-size: 16px;
+}
+
+.list-group-item-user .name {
+  font-size: 16px;
+}
+
+.list-group-item-user .users-information {
+  display: inline-block;
+  width: 250px;
 }

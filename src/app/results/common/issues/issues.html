@@ -1,9 +1,9 @@
-﻿<div class="issues">
-  <ul ng-repeat="issue in issueCtrl.issues">
-    <li>
-      <span>{{issue.user.login}}</span>
-      <span>, current status: {{issue.state}}</span>
-      <span> and short description: {{issue.title}}</span>
+﻿<div class="list">
+  <ul ng-repeat="issue in issueCtrl.issues" class="list-result">
+    <li class="list-group-item-user">
+      <span>Creator is <b><em>{{issue.user.login}}</em></b></span>
+      <span>, current status of issue: <em><u>{{issue.state}}</u></em></span>
+      <p> and short description: <em><u>{{issue.title}}</u></em></p>
     </li>
   </ul>
   <ui-view></ui-view>

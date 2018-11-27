@@ -6,7 +6,9 @@
   "scripts": {},
   "author": "Krystsina Kastsiuk",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "angular-material": "^1.1.10"
+  },
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "gulp": "^3.9.1",

@@ -1,8 +1,8 @@
-﻿<div class="repositories">
-  <ul ng-repeat="repository in repoCtrl.repositories">
-    <li>
-      <span style="color:aquamarine;">Login: {{repository.owner.login}},</span>
-      <a href="{{repository.git_url}}">{{repository.git_url}}</a>
+﻿<div class="list">
+  <ul ng-repeat="repository in repoCtrl.repositories" class="list-result">
+    <li class="list-group-item-user">
+      <p>Owner is <b class="name"><em>{{repository.owner.login}}</em></b></p>
+      <p>go to the repository <a href="{{repository.git_url}}" target="_blank">{{repository.git_url}}</a></p>
     </li>
   </ul>
   <ui-view></ui-view>
