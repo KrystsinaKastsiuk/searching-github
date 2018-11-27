@@ -3,7 +3,7 @@
   
   angular
     .module('gitHubSearch', ['ui.router'])
-    .config(['$locationProvider', '$stateProvider', '$urlRouterProvider', function($locationProvider, $stateProvider, $urlRouterProvider) {
+    .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
       $stateProvider
         .state('search', {
           url: '/',
@@ -41,7 +41,14 @@
           },
           template: '<codes-list></codes-list>'
         })
+        .state('search.results.userDetails', {
+          url: '/users/{name}',
+          template: '<user-details></user-details>'
+        })
+        .state('search.results.repositoryDetails', {
+          url: '/repository/{repo}',
+          template: '<repository-details></repository-details>'
+        })
       $urlRouterProvider.otherwise("/");
-      $locationProvider.html5Mode(true);
     }]);
 })();

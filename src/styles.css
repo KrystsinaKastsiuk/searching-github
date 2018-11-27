@@ -154,5 +154,28 @@ md-input-container input {
 
 .list-group-item-user .users-information {
   display: inline-block;
-  width: 250px;
+  width: 350px;
+}
+
+.userDetailsAvatar {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.userDetails {
+  display: flex;
+  margin: 25px;
+}
+
+.userDetailsMain, .userDetailsRepo {
+  flex-flow: column;
+}
+
+.userDetailsMain h3 {
+  text-align: center;
+}
+.details {
+  height: 100px;
+  background-color:#e0ffbe80;
 }

@@ -1,0 +1,12 @@
+﻿<md-button class="md-raised md-primary md-button md-ink-ripple" ng-click="repoDetailsCtrl.backRepositoriesPage()">Back</md-button>
+<div class="userDetails">
+  <div class="userDetailsRepo">
+    <ul ng-repeat="repo in repoDetailsCtrl.repoDetails">
+      <li class="list-group-item-user details">
+        <span>Repo name is <em><u>{{repo.name}}</u></em></span>
+        <p>Short description: <em><u>{{repo.description}}</u></em></p>
+      </li>
+    </ul>
+   </div> 
+</div>
+  

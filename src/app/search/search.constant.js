@@ -4,11 +4,11 @@
   angular
     .module('gitHubSearch')
     .constant('API', {
-      url: 'https://api.github.com/search',
+      url: 'https://api.github.com',
 
-      users: { path: 'users?q=', param: ''},
-      repositories: { path: 'repositories?q=', param: ''},
-      issues: { path: 'issues?q=', param: ''},
-      codes: { path: 'code?q=', param: '+repo:jquery%2Fjquery'} //param обязательный параметр
+      users: { path: '/search/users?q=', param: ''},
+      repositories: { path: '/search/repositories?q=', param: ''},
+      issues: { path: '/search/issues?q=', param: ''},
+      codes: { path: '/search/code?q=', param: '+repo:jquery%2Fjquery'} //param обязательный параметр
     })
 })();

@@ -3,8 +3,8 @@
     <li class="list-group-item-user">
       <img ng-src="{{user.avatar_url}}">
       <div class="users-information">
-        <b class="name"><em>{{user.login}}</em></b>
-        <a href="{{user.repos_url}}" target="_blank">{{user.repos_url}}</a>
+        <span><b class="name"><em>{{user.login}}</em></b></span>
+        <span ng-click="usersCtrl.sendUserDetails(user.login, user.repos_url)">{{user.repos_url}}</span>
       </div>
     </li>
   </ul>
