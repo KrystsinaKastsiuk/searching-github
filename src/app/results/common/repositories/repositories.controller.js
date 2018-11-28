@@ -13,13 +13,12 @@
     
     dataService.findData('repositories', repoCtrl.request).then( response => {
       repoCtrl.repositories = response.items;
-      console.log("repoData", repoCtrl.repositories);
     });
 
     repoCtrl.sendRepositoryDetails = function(name, repo) {
       repoCtrl.name = name;      
       repoCtrl.repo = repo;
-      $state.go("search.results.repositoryDetails", {repo: repoCtrl.repo});
+      $state.go("search.results.repositoryDetails", {name: repoCtrl.name, repo: repoCtrl.repo});
     }
   }
 })();

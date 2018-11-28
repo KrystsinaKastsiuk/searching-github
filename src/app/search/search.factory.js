@@ -17,20 +17,19 @@
         }).then((response) => response.data, (response) => response.status);
       };
 
-      service.findUserDetails = (listRepos) => {
-        console.log("serviceVal", listRepos);
+      service.findUserDetails = (userName) => {
         return $http({
           method:'GET', 
-          // url: listRepos
-          url: 'https://api.github.com/users/Tyriar/repos'
+          url: API.url + '/users/' + userName + '/repos',
+          he
         }).then((response) => response.data, (response) => response.status);
       };
 
       service.findRepositoryDetails = (userName, nameRepo) => {
+        console.log(userName, nameRepo);
         return $http({
           method:'GET', 
-          // url: API.url + '/repos' + userName + '/' + nameRepo + '/' + 'forks'
-          url: 'https://api.github.com/repos/iliakan/webpack-screencast/forks'
+          url: API.url + '/repos/' + userName + '/' + nameRepo + '/' + 'forks'
         }).then((response) => response.data, (response) => response.status);
       };
 

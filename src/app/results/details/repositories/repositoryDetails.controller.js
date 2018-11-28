@@ -10,9 +10,14 @@
     const repoDetailsCtrl = this;   
     
     repoDetailsCtrl.request = $stateParams.request;
+    repoDetailsCtrl.name = $stateParams.name;
+    repoDetailsCtrl.repo = $stateParams.repo;
 
-    dataService.findRepositoryDetails().then( response => {
+    dataService.findRepositoryDetails(repoDetailsCtrl.name, repoDetailsCtrl.repo).then( response => {
       repoDetailsCtrl.repoDetails = response;
+      console.log("repoDetails", response);
+      repoDetailsCtrl.owner = response[0].owner.login;
+      repoDetailsCtrl.avatar = response[0].owner.avatar_url;
     });
 
     repoDetailsCtrl.backRepositoriesPage = function() {

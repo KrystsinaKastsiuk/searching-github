@@ -17,8 +17,6 @@
     usersCtrl.sendUserDetails = function(name, repos) {
       usersCtrl.name = name;      
       usersCtrl.repos = repos;
-      // console.log('name', name);
-      // console.log('repos', repos);
       $state.go("search.results.userDetails", {name: usersCtrl.name});
     }
   }

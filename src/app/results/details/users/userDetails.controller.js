@@ -10,8 +10,9 @@
     const userDetailsCtrl = this;   
     
     userDetailsCtrl.request = $stateParams.request;
+    userDetailsCtrl.name = $stateParams.name;
 
-    dataService.findUserDetails(userDetailsCtrl.listRepos).then( response => {
+    dataService.findUserDetails(userDetailsCtrl.name).then( response => {
       userDetailsCtrl.userDetails = response;
       userDetailsCtrl.owner = response[0].owner.login;
       userDetailsCtrl.avatar = response[0].owner.avatar_url;

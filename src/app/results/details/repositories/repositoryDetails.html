@@ -1,10 +1,14 @@
 ﻿<md-button class="md-raised md-primary md-button md-ink-ripple" ng-click="repoDetailsCtrl.backRepositoriesPage()">Back</md-button>
 <div class="userDetails">
+  <div class="userDetailsMain">
+    <img class="userDetailsAvatar" ng-src="{{repoDetailsCtrl.avatar}}">
+    <h3>{{repoDetailsCtrl.owner}}</h3>
+  </div>
   <div class="userDetailsRepo">
     <ul ng-repeat="repo in repoDetailsCtrl.repoDetails">
       <li class="list-group-item-user details">
-        <span>Repo name is <em><u>{{repo.name}}</u></em></span>
-        <p>Short description: <em><u>{{repo.description}}</u></em></p>
+        <span>Created at <em><u>{{repo.created_at}}</u></em></span>
+        <p>Fork's user's name: <em><u>{{repo.owner.login}}</u></em></p>
       </li>
     </ul>
    </div> 

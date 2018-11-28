@@ -10,7 +10,7 @@
     .factory('interceptor', function () {
       return {
         request: function (config) {
-          config.headers['Authorization'] = 'Basic bc2901c93af49b85529e4b8e77aa5644e87c9661=';
+          config.headers['Authorization'] = 'Basic 47d192ead93feb1a0c31b12fb2a3b696020f634f=';
           config.headers['Accept'] = 'application/json;odata=verbose';
           return config;
         }

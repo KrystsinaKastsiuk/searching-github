@@ -46,7 +46,7 @@
           template: '<user-details></user-details>'
         })
         .state('search.results.repositoryDetails', {
-          url: '/repository/{repo}',
+          url: '/repository/{name}/{repo}',
           template: '<repository-details></repository-details>'
         })
       $urlRouterProvider.otherwise("/");
