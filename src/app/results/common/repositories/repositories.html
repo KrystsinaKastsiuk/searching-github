@@ -1,0 +1,9 @@
+﻿<div class="list">
+  <ul ng-repeat="repository in repoCtrl.repositories" class="list-result">
+    <li class="list-group-item-user">
+      <p>Owner is <b class="name"><em>{{repository.owner.login}}</em></b></p>
+      <p ng-click="repoCtrl.sendRepositoryDetails(repository.owner.login, repository.name)"><a href="{{repository.git_url}}" target="_blank"></a>go to the repository</a></p>
+    </li>
+  </ul>
+  <ui-view></ui-view>
+</div>

@@ -1,0 +1,17 @@
+﻿<md-button class="md-raised md-primary md-button md-ink-ripple" ng-click="userDetailsCtrl.backUsersPage()">Back</md-button>
+<div class="userDetails">
+  <div class="userDetailsMain">
+    <img class="userDetailsAvatar" ng-src="{{userDetailsCtrl.avatar}}">
+    <h3>{{userDetailsCtrl.owner}}</h3>
+  </div>
+  <div class="userDetailsRepo">
+    <ul ng-repeat="user in userDetailsCtrl.userDetails">
+      <li class="list-group-item-user details">
+        <span>File name is <em><u>{{user.name}}</u></em></span>
+        <p>Short description: <em><u>{{user.description}}</u></em></p>
+        <a href="{{user.forks_url}}" target="_blank">{{user.forks_url}}</a>
+      </li>
+    </ul>
+   </div> 
+</div>
+  

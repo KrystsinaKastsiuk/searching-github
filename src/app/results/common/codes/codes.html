@@ -1,0 +1,10 @@
+﻿<div class="list">
+  <ul ng-repeat="code in codeCtrl.codes" class="list-result">
+    <li class="list-group-item-user">
+      <span>name file: <em><u>{{code.name}}, </u></em></span>
+      <p><a href="{{code.html_url}}" target="_blank">Go to see the codes in more details</a></p>
+    </li>
+  </ul>
+  <ui-view></ui-view>
+</div>
+  
