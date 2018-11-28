@@ -20,8 +20,7 @@
       service.findUserDetails = (userName) => {
         return $http({
           method:'GET', 
-          url: API.url + '/users/' + userName + '/repos',
-          he
+          url: API.url + '/users/' + userName + '/repos'
         }).then((response) => response.data, (response) => response.status);
       };
 

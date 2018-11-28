@@ -21,5 +21,13 @@
     userDetailsCtrl.backUsersPage = function() {
       $state.go("search.results.users", {request: userDetailsCtrl.request});;
     }
+
+    userDetailsCtrl.previousUserDetailsPage = function() {
+      console.log("usersDetails", userDetailsCtrl.name - 1);
+    }
+
+    userDetailsCtrl.nextUserDetailsPage = function() {
+      console.log("usersDetails", userDetailsCtrl.name + 1);
+    }
   }
 })();

@@ -179,3 +179,7 @@ md-input-container input {
   height: 100px;
   background-color:#e0ffbe80;
 }
+
+a {
+  cursor: pointer;
+}
